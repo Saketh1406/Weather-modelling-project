@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+def predict(a, b, c, days):
+    return [a*d*d + b*d + c for d in days]
+days = list(range(1, 11))
+
+t1 = predict(0.2, -0.5, 25, days)   
+t2 = predict(0.3, -0.8, 28, days)   
+t3 = predict(0.4, -1.0, 30, days)  
+
+plt.plot(days, t1, label="Sprint 1")
+plt.plot(days, t2, label="Sprint 2")
+plt.plot(days, t3, label="Sprint 3")
+
+plt.xlabel("Days")
+plt.ylabel("Temperature (°C)")
+plt.title("Agile Model - Sprint-wise Weather Prediction")
+plt.legend()
+plt.show()
