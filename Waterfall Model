@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+def quadratic_weather(a, b, c, x):
+    return a * x * x + b * x + c
+
+a, b, c = 0.4, -1.5, 30
+
+days = list(range(1, 11))
+
+temperature = [quadratic_weather(a, b, c, d) for d in days]
+
+plt.plot(days, temperature)
+plt.xlabel("Days")
+plt.ylabel("Temperature (°C)")
+plt.title("Waterfall Model - Weather Prediction")
+plt.show()
