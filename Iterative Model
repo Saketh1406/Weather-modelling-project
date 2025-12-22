@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+days = list(range(1, 11))
+a, b, c = 0.2, -1.0, 26
+temps_iteration1 = [a*d*d + b*d + c for d in days]
+a, b, c = 0.5, -1.8, 32
+temps_iteration2 = [a*d*d + b*d + c for d in days]
+
+plt.plot(days, temps_iteration1, label="Iteration 1")
+plt.plot(days, temps_iteration2, label="Iteration 2")
+
+plt.xlabel("Days")
+plt.ylabel("Temperature (°C)")
+plt.title("Iterative Model - Improved Predictions")
+plt.legend()
+plt.show()
